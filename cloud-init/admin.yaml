@@ -1,0 +1,6 @@
+#cloud-config
+hostname: admin
+runcmd:
+        - ifconfig ens4 up
+        - dhclient ens4
+        - echo "nameserver 8.8.8.8 " > /etc/resolv.conf
